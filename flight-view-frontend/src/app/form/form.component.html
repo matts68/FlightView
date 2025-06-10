@@ -1,0 +1,31 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Flight number:</label>
+    <input formControlName="flightNumber" />
+  </div>
+
+  <div>
+    <label>Flight date :</label>
+    <input type="date" formControlName="flightDate" />
+  </div>
+
+  <div>
+    <label>Company :</label>
+    <input formControlName="company" />
+  </div>
+
+  <div class="star-rating">
+    <label>Rating :</label>
+    <ng-container *ngFor="let rating of [1,2,3,4,5]">
+      <span (click)="changeRating(rating)"
+            [style.color]="form.value.rating >= rating ? 'yellow' : 'gray'">*</span>
+    </ng-container>
+  </div>
+
+  <div>
+    <label>Remarks :</label>
+    <textarea formControlName="remarks"></textarea>
+  </div>
+
+  <button type="submit">Validate</button>
+</form>

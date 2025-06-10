@@ -1,0 +1,35 @@
+### Recherche de tous les avis (résultat paginé)
+GET http://localhost:8080/flights/api/views
+
+### Filtre des avis sur la note
+GET http://localhost:8080/flights/api/views?rating=3
+
+### Filtre des avis sur la compagnie aérienne
+GET http://localhost:8080/flights/api/views?company=lufth
+
+### Filtre des avis sur la date
+GET http://localhost:8080/flights/api/views?date=02.06.2025
+
+### Filtre des avis sur ceux non répondus
+GET http://localhost:8080/flights/api/views?answered=false
+
+### Filtres combinés sur la recherche des avis
+GET http://localhost:8080/flights/api/views?rating=3&company=transavia&date=02.06.2025&answered=false
+
+### Filtres combinés sur la recherche des avis
+GET http://localhost:8080/flights/api/views?rating=3&company=transavia&date=02.06.2025&answered=false
+
+### Recherche d'un avis par son identifiant
+GET http://localhost:8080/flights/api/view/5
+
+### Recherche d'un avis par son identifiant
+PUT http://localhost:8080/flights/api/view/answer
+
+### Avis marqué comme traité
+PUT http://localhost:8080/flights/api/view/1/processed
+
+### Avis marqué comme rejeté
+PUT http://localhost:8080/flights/api/view/2/rejected
+
+### Avis marqué comme publié
+PUT http://localhost:8080/flights/api/view/3/published
