@@ -3,16 +3,11 @@
 ## Fonctionnalités
 
 Les fonctionnalités suivantes ont été implémentées et des exemples de requêtes HTTP testées sont disponibles dans le fichier Requests.http :
-
-### Recherche des avis
-Recherche (paginée) de tous les avis ou filtre suivant les critères "note", "compagnie aérienne", "date de création", "non répondus".
+- Recherche des avis : Recherche (paginée) de tous les avis ou filtre suivant les critères "note", "compagnie aérienne", "date de création", "non répondus".
 Les avis sont triés suivant l'élément "sort" transmis dans le paramètre "pageable" (tri par défaut sur la date). 
-
-### Recherche d'un avis par son identifiant
-
-### Ajout d'une réponse sur un avis
-
-### Marquage d'un avis comme "publié", "rejeté" ou "traité"
+- Recherche d'un avis par son identifiant
+- Ajout d'une réponse sur un avis
+- Marquage d'un avis comme "publié", "rejeté" ou "traité"
 
 ## Modules
 
