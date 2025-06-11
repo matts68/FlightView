@@ -2,7 +2,7 @@
 
 ## Fonctionnalités
 
-Les fonctionnalités suivantes ont été implémentées et sont disponibles dans le fichier Requests.http :
+Les fonctionnalités suivantes ont été implémentées et des exemples de requêtes HTTP testées sont disponibles dans le fichier Requests.http :
 
 ### Recherche des avis
 Recherche (paginée) de tous les avis ou filtre suivant les critères "note", "compagnie aérienne", "date de création", "non répondus".
@@ -63,12 +63,11 @@ Avis d'un passager pour un vol
 - un vol est associé à plusieurs avis, un avis n'est associé qu'à un vol : lien "one to many"
 - un vol est associé à plusieurs passager, un avis n'est associé qu'à un passager : lien "one to many"
 
-## Base de données
+## Base de données et chargement des données de tests
 Le choix de la base de données s'est porté sur Postgresql qui figurait parmi les prérequis pour le poste.
 
-Les tests de l'application ont été opérés via Docker.
+Le répertoire init-database met à disposition 2 fichiers :
+### un script init.sql (DDL et DML) pour créer les tables (et les contraintes d'intégrité) et charger quelques données de tests
 
-Le fichier docker-compose.yml et le script de chargement de la DB se trouvent dans le répertoire init-database.
-
-Pour effectuer ce chargement, il faut exécuter la commande suivante :
-docker-compose up -d
+### un fichier docker-compose.yml pour charger une image Docker officielle de postgres en local et exécuter ce script
+Pour effectuer ce chargement, il faut exécuter la commande suivante : docker-compose up -d
