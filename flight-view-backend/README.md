@@ -67,7 +67,6 @@ Avis d'un passager pour un vol
 Le choix de la base de données s'est porté sur Postgresql qui figurait parmi les prérequis pour le poste.
 
 Le répertoire init-database met à disposition 2 fichiers :
-### un script init.sql (DDL et DML) pour créer les tables (et les contraintes d'intégrité) et charger quelques données de tests
-
-### un fichier docker-compose.yml pour charger une image Docker officielle de postgres en local et exécuter ce script
+- un script init.sql (DDL et DML) pour créer les tables (et les contraintes d'intégrité) et charger quelques données de tests
+- un fichier docker-compose.yml pour charger une image Docker officielle de postgres en local et exécuter ce script
 Pour effectuer ce chargement, il faut exécuter la commande suivante : docker-compose up -d
